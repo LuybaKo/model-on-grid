@@ -1,0 +1,30 @@
+.feature-works {
+    @media (max-width: 1140px) {
+        padding: 0 15px;
+    }
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 15px;
+    padding-bottom: 120px;
+    text-align: center;
+    line-height: 0;
+
+    @media (max-width: 576px) {
+        padding-bottom: 70px;
+    }
+
+    @media (min-width: 576px) and (max-width: 992px) {
+        padding-bottom: 90px;
+    }
+}
+
+.work {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

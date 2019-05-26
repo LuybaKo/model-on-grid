@@ -1,0 +1,51 @@
+@import 'vars';
+
+.footer {
+    padding: 85px 0;
+    text-align: center;
+    background-color: #262b2e;
+
+    @media (max-width: 1140px) {
+        padding: 15px;
+    }
+
+    .follow {
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .media-icons {
+        display: flex;
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+.icon {
+    display: grid;
+    margin: 0 7px;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    background-color: $grey-title;
+
+    &:hover {
+        background-color: $blue-hover;
+    }
+
+    &:hover i {
+        color: #000;
+    }
+
+    i {
+        margin-right: 0;
+        color: $grey-text;
+    }
+
+}
+
+.copyright {
+    margin-top: 30px;
+    font-weight: 500;
+}

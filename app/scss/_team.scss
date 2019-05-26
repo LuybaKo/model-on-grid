@@ -1,0 +1,128 @@
+@import 'vars';
+
+.team {
+    @media (max-width: 1140px) {
+        width: 100%;
+        padding: 0px 15px;
+    }
+}
+
+.team-fotos {
+    @extend .works;
+    text-align: center;
+    line-height: 1.5;
+
+    @media (max-width: 576px) {
+        padding-bottom: 70px;
+    }
+
+    @media (min-width: 576px) and (max-width: 992px) {
+        padding-bottom: 90px;
+    }
+
+    .person {
+        position: relative;
+        width: auto;
+        min-height: 430px;
+
+        &:hover .comment {
+            visibility: visible;
+        }
+    }
+}
+
+.comment {
+    position: absolute;
+    top: 42%;
+    left: 20px;
+    width: 330px;
+    padding: 34px;
+    background-color: $blue-hover;
+    visibility: hidden;
+
+    @media (max-width: 1140px) {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+.triangle {
+    position: absolute;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid $blue-hover;
+}
+
+.name {
+    font-family: $merriweather;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2c3a39;
+    text-transform: uppercase;
+
+    span {
+        font-size: 15px;
+        font-weight: 400;
+        font-style: italic;
+        color: #767978;
+        text-transform: capitalize;
+    }
+}
+
+.text-comment {
+    margin: 25px 0;
+    color: #2f6f6a;
+}
+
+.media-icons {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #2f6f6a;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: #2c3a39;
+        }
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+
+.foto1 {
+    background-image: url(../img/foto1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto2 {
+    background-image: url(../img/foto2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto3 {
+    background-image: url(../img/foto3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto4 {
+    background-image: url(../img/foto4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto5 {
+    background-image: url(../img/foto5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,128 @@
+@import 'vars';
+
+.about-us {
+    padding-bottom: 160px;
+    background-color: $grey-bg;
+
+    @media (max-width: 1140px) {
+        padding: 0px 15px 70px;
+    }
+
+    .grid-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(520px, auto);
+        grid-column-gap: 100px;
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(350px, auto);
+            grid-gap: 30px;
+        }
+
+        @media (min-width: 577px) and (max-width: 992px) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(450px, auto);
+            grid-gap: 100px;
+        }
+
+        @media (min-width: 992px) and (max-width: 1140px) {
+            grid-column-gap: 70px;
+        }
+
+    }
+
+
+    .slide {
+        position: relative;
+        text-align: center;
+
+        img {
+            display: block;
+
+            @media (max-width: 576px) {
+                max-width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+    }
+
+    .slide input {
+        display: none;
+    }
+
+    .slide input+label {
+        position: relative;
+        bottom: 0;
+        top: 110%;
+        z-index: 100;
+        display: inline-block;
+        margin-right: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 8px;
+        background: rgba(208, 208, 208, 0.8);
+        transition: opacity 0.8s ease-out 0s;
+        cursor: pointer;
+
+        @media (max-width: 576px) {
+            top: 95%;
+        }
+        @media (min-width: 577px) and (max-width: 992px) {
+            top: 115%;
+        }
+
+        @media (min-width: 993px) and (max-width: 1140px) {
+            top: 103%;
+        }
+    }
+
+    .slide input+label:hover {
+        background: rgba(250, 250, 250, 0.8);
+    }
+
+    .slide input:checked+label {
+        background: rgba(113, 246, 235, 0.8);
+    }
+
+    .slide div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        text-align: -webkit-center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+
+    }
+
+    .slide input:checked+label+div {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    }
+
+    .slide div p {
+        position: absolute;
+        font-size: 18px;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 3px #222;
+    }
+}
+
+.introduction-title {
+    padding-top: 20px;
+    font-family: $merriweather;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #9b9d9d;
+}
